@@ -21,9 +21,12 @@ def plot_selected(df, columns, start_index, end_index):
     
     #print (df)
     
-    df.ix[start_index:end_index,columns]
+    
     print (df)
-    plot_data(df.ix[start_index:end_index,columns], title="")
+    print(normalize_data(df))
+    
+    
+    plot_data(normalize_data(df.ix[start_index:end_index,columns]), title="")
     
             
 
@@ -60,6 +63,10 @@ def plot_data(df, title="Stock prices"):
     ax.set_xlabel("Date")
     ax.set_ylabel("Price")
     plt.show()
+
+def normalize_data(df):
+    
+    return df/df.ix[0,:]
 
 
 def test_run():
