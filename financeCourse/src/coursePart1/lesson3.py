@@ -8,7 +8,6 @@ import numpy as np
 import symbol
 import os
 import matplotlib.pyplot as plt
-import pandas_datareader.data as web
 from pandas.core.indexes.datetimes import date_range
 import datetime as dt
 def plot_selected(df, columns, start_index, end_index):
